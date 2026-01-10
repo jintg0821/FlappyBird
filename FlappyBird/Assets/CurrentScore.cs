@@ -5,13 +5,8 @@ using TMPro;
 
 public class CurrentScore : MonoBehaviour
 {
-    void Start()
+    public void OnEnable()
     {
-        GetComponent<TextMeshProUGUI>().text = "Score: " + Score.score.ToString();
-    }
-
-    void Update()
-    {
-        
+        GetComponent<TextMeshProUGUI>().text = "Current Score: " + Score.score.ToString();
     }
 }

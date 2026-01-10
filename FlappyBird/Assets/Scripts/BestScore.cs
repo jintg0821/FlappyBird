@@ -5,7 +5,7 @@ using TMPro;
 
 public class BestScore : MonoBehaviour
 {
-    void Start()
+    public void OnEnable()
     {
         GetComponent<TextMeshProUGUI>().text = "Best Score: " + Score.bestScore;
     }
