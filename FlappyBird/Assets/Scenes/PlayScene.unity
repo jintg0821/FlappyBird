@@ -1286,6 +1286,7 @@ MonoBehaviour:
   obstacles:
   - {fileID: 6193797883984554072, guid: 347cdc7a440750e46b031ce6008e2a6a, type: 3}
   - {fileID: 8351913078744404524, guid: 2d9c86ec95ad5614b9b905136061e231, type: 3}
+  currentObstacle: {fileID: 0}
   timeDiff: 3
 --- !u!4 &763500463
 Transform:
@@ -1914,6 +1915,9 @@ MonoBehaviour:
   players:
   - {fileID: -1850814729, guid: 5ebd6f60e383b7243867711f281d64be, type: 3}
   - {fileID: -1712940055, guid: 5ebd6f60e383b7243867711f281d64be, type: 3}
+  playerDieSprites:
+  - {fileID: 548431915, guid: 5ebd6f60e383b7243867711f281d64be, type: 3}
+  - {fileID: 348700153, guid: 5ebd6f60e383b7243867711f281d64be, type: 3}
   backgrounds:
   - {fileID: 21300000, guid: 163e364f5dfd874438ea43b063a05976, type: 3}
   - {fileID: 21300000, guid: ffc785abcba82224fb1c22966f4e1345, type: 3}

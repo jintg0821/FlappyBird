@@ -5,6 +5,7 @@ using UnityEngine;
 public class MakePipe : MonoBehaviour
 {
     public GameObject[] obstacles;
+    public GameObject currentObstacle;
     public float timeDiff;
     float timer = 0;
 
@@ -13,8 +14,15 @@ public class MakePipe : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > timeDiff)
         {
-            int randomNum = Random.Range(0, obstacles.Length);
-            GameObject newPipe = Instantiate(obstacles[randomNum]);
+            if (Score.score >= 2)
+            {
+                currentObstacle = obstacles[1];
+            }
+            else
+            {
+                currentObstacle = obstacles[0];
+            }
+            GameObject newPipe = Instantiate(currentObstacle);
             newPipe.transform.position = new Vector3(6, Random.Range(-2.3f, 4.5f), 0);
             timer = 0;
             Destroy(newPipe, 10);
