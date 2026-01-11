@@ -61,7 +61,7 @@ public class BirdJump : MonoBehaviour
             rb.velocity = Vector2.up * jumpPower;
         }
 
-        if (Score.score >= 2)
+        if (Score.score >= 300)
         {
             GetComponent<SpriteRenderer>().sprite = players[1];
             animator.runtimeAnimatorController = animatorControllers[1];

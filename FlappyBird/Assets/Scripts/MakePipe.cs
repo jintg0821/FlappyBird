@@ -14,7 +14,7 @@ public class MakePipe : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > timeDiff)
         {
-            if (Score.score >= 2)
+            if (Score.score >= 300)
             {
                 currentObstacle = obstacles[1];
             }
