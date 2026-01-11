@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -11,11 +9,12 @@ public class BirdJump : MonoBehaviour
     public static bool firstLaunch = true;
 
     public Animator animator;
-    public AnimatorController[] animatorControllers; 
+    public RuntimeAnimatorController[] animatorControllers; 
     private Rigidbody2D rb;
     public float jumpPower;
     public GameObject GameOverPanel;
     public GameObject GameStartButton;
+    public GameObject FontCredit;
 
     public bool isDie = false;
 
@@ -45,6 +44,7 @@ public class BirdJump : MonoBehaviour
         {
             Time.timeScale = 1;
             GameStartButton.SetActive(false);
+            FontCredit.SetActive(false);
         }
     }
 
