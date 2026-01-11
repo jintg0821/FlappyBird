@@ -446,7 +446,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 120
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -782,7 +782,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8609c83a4f3a22c4581084348fe88f07, type: 2}
   m_audioClip: {fileID: 8300000, guid: ea60d4058c4f8db4a9db2bb9caf1c32c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -2034,6 +2034,7 @@ MonoBehaviour:
   soundImage: {fileID: 83479353}
   audioMixer: {fileID: 24100000, guid: 8609c83a4f3a22c4581084348fe88f07, type: 2}
   audioSource: {fileID: 1134813729}
+  backgroundSource: {fileID: 381188582}
   audioClips:
   - {fileID: 8300000, guid: 87bbb817a2278d1469e4fc612ab10dbb, type: 3}
   - {fileID: 8300000, guid: 2fa8eb36e15004446be8d3d3137e0b31, type: 3}

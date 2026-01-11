@@ -28,6 +28,7 @@ public class BirdJump : MonoBehaviour
     public Image soundImage;
     public AudioMixer audioMixer;
     public AudioSource audioSource;
+    public AudioSource backgroundSource;
     public AudioClip[] audioClips;
 
     void Start()
@@ -43,6 +44,7 @@ public class BirdJump : MonoBehaviour
         }
         else
         {
+            backgroundSource.Play();
             Time.timeScale = 1;
             GameStartButton.SetActive(false);
             FontCredit.SetActive(false);
@@ -77,6 +79,9 @@ public class BirdJump : MonoBehaviour
 
         isDie = true;
 
+        backgroundSource.Stop();
+        animator.SetBool("isDie", true);
+
         if (collision.gameObject.CompareTag("Obstacles0"))
             audioSource.PlayOneShot(audioClips[1]);
 
@@ -101,6 +106,7 @@ public class BirdJump : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1;
+        animator.SetBool("isDie", false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
